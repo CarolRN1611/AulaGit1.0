@@ -5,4 +5,6 @@ int main(){
 	
 	printf("Hello word");
 	
+	printf("Seja bem vindo:");
+	
 }
