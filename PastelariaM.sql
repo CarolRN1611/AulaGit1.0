@@ -84,28 +84,28 @@ CREATE TABLE itens_pedidos (
 );
 
 
--- Insert into clientes
+
 INSERT INTO clientes (nome_cliente, cpf, data_nascimento, telefone, email, endereco) 
 VALUES 
 ('João Silva', '12345678901', '1994-05-15', '11987654321', 'joao.silva@example.com', 'Rua da Penha, 123'),
 ('Maria Oliveira', '98765432109', '2006-10-20', '11901234567', 'maria.oliveira@example.com', 'Av. Champs Elyées, 456'),
 ('Pedro Santos', '45678901234', '1989-07-05', '11976543210', 'pedro.santos@example.com', 'Rua Las Ramblas, 789');
 
--- Insert into cargos
+
 INSERT INTO cargos (nome_cargo, salario)
 VALUES 
 ('Atendente', 1500.00),
 ('Cozinheiro', 2000.00),
 ('Gerente', 3000.00);
 
--- Insert into funcionarios
+
 INSERT INTO funcionarios (nome_funcionario, cpf, data_nascimento, telefone, email, endereco, cargo) 
 VALUES 
 ('Carlos Pereira', '23456789012', '1996-03-25', '11987654322', 'carlos.pereira@example.com', 'Rua X, 789', 'Atendente'),
 ('Ana Souza', '34567890123', '1984-11-12', '11901234568', 'ana.souza@example.com', 'Av. Y, 456', 'Cozinheiro'),
 ('Luiza Lima','56789012345', '1992-08-30', '11976543211', 'luiza.lima@example.com', 'Rua Z, 123', 'Gerente');
 
--- Insert into produtos
+
 INSERT INTO produtos (nome_produto, descricao, preco, categoria, tamanho,estoque) 
 VALUES 
 ('Pastel de Carne', 'Pastel recheado com carne moída', 3.50, 'Salgado', 'P',10),
@@ -153,7 +153,7 @@ VALUES
 ('Batata Frita', 'Porção de batatas fritas crocantes', 7.00, 'Acompanhamento', 'M',10),
 ('Batata Frita', 'Porção de batatas fritas crocantes', 9.00, 'Acompanhamento', 'G',10);
 
--- Insert into recheios
+
 INSERT INTO recheios (nome_recheio, descricao)
 VALUES 
 ('Carne', 'Carne moída temperada'),
@@ -165,7 +165,7 @@ VALUES
 ('Banana com Canela', 'Banana com Canela'),
 ('Cogumelos', 'Cogumelos refogado');
 
--- Insert into produtos_recheios
+
 INSERT INTO produtos_recheios (id_produto, id_recheio, quantidade) VALUES
 (1, 1, 100), 
 (2, 3, 120), 
@@ -173,14 +173,14 @@ INSERT INTO produtos_recheios (id_produto, id_recheio, quantidade) VALUES
 (5, 2, 50),
 (5, 3, 100);
 
--- Insert into pagamentos
+
 INSERT INTO pagamentos (forma, descricao)
 VALUES 
 ('Dinheiro', 'Pagamento em dinheiro na entrega'),
 ('Cartão ', 'Pagamento com cartão de crédito ou débito'),
 ('Pix ', 'Pagamento via Pix na entrega');
 
--- Insert into pedidos
+
 INSERT INTO pedidos (id_cliente, datapedido, forma_pagamento, valor_total, sts)
 VALUES 
 (1, '2023-09-09 10:00:00', 1, 10.50, 'FINALIZADO'),
@@ -194,16 +194,16 @@ VALUES
 (1, '2024-05-06 15:45:00', 3, 10.00, 'PROCESSANDO'),
 (1, '2024-06-04 16:00:00', 1, 10.00, 'PROCESSANDO'),
 (2, '2024-06-04 16:15:00', 2, 15.50, 'PROCESSANDO'),
-(3, '2024-05-04 16:30:00', 3, 11.50, 'PROCESSANDO'), 
+(3, '2024-05-04 16:30:00', 3, 11.50, 'FINALIZADO'), 
 (1, '2024-06-04 16:45:00', 1, 12.00, 'PROCESSANDO'), 
-(1, '2023-03-04 16:30:00', 3, 11.50, 'PROCESSANDO'),
-(1, '2024-06-05 17:00:00', 2, 7.50, 'PROCESSANDO'),
+(1, '2023-03-04 16:30:00', 3, 11.50, 'FINALIZADO'),
+(1, '2024-06-05 17:00:00', 2, 7.50, 'FINALIZADO'),
 (2, '2024-06-05 17:30:00', 3, 7.00, 'PROCESSANDO'),
-(3, '2024-05-05 18:00:00', 1, 7.00, 'PROCESSANDO'),
+(3, '2024-05-05 18:00:00', 1, 7.00, 'FINALIZADO'),
 (1, '2024-03-05 18:30:00', 2, 5.00, 'PROCESSANDO'),
 (19, NOW(), 1, 10.00, 'PROCESSANDO');
 
--- Insert into itens_pedidos
+
 INSERT INTO itens_pedidos (id_pedido, id_produto, quantidade, valor_unitario)
 VALUES 
 (1, 1, 2, 3.50),
